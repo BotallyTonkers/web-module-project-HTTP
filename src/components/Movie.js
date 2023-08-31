@@ -12,7 +12,8 @@ const Movie = (props) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:9000/api/movies/${id}`)
+    axios
+    .get(`http://localhost:9000/api/movies/${id}`)
       .then(res => {
         setMovie(res.data);
       })
